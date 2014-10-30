@@ -447,8 +447,6 @@ protected slots:
     if (!label.isEmpty()) {
       if (!customLabels.contains(label)) {
         addLabel(label);
-        // addLabel may have changed the label, update the model accordingly.
-        torrentItem->setData(TorrentModelItem::TR_LABEL, label);
       }
       // Update label counter
       Q_ASSERT(customLabels.contains(label));
